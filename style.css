@@ -1,0 +1,473 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* PAGE */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #e9d5ff 0%, transparent 35%),
+        #f5f7fb;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    color: #1e293b;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+
+    max-width: 650px;
+}
+
+
+/* FORM CARD */
+
+.form-box {
+    background: rgba(255, 255, 255, 0.92);
+
+    padding: 42px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 20px 50px rgba(30, 41, 59, 0.12),
+        0 4px 12px rgba(30, 41, 59, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    animation: fadeIn 0.6s ease;
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* HEADING */
+
+h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    color: #172554;
+
+    margin-bottom: 8px;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 32px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUT + SELECT */
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dbe1ea;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus {
+
+    background: white;
+
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.10);
+
+    transform: translateY(-1px);
+}
+
+
+/* SELECT */
+
+.form-group select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* BUTTON AREA */
+
+.button-group {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* COMMON BUTTON */
+
+.button-group button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #6366f1
+    );
+
+    color: white;
+
+    box-shadow:
+        0 6px 15px rgba(79, 70, 229, 0.25);
+}
+
+
+.submit-btn:hover {
+
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #4f46e5
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(79, 70, 229, 0.30);
+}
+
+
+/* RESET */
+
+.reset-btn {
+
+    background: #eef2f7;
+
+    color: #475569;
+
+    border: 1px solid #e2e8f0 !important;
+}
+
+
+.reset-btn:hover {
+
+    background: #e2e8f0;
+
+    transform: translateY(-2px);
+}
+
+
+/* DATE INPUT */
+
+input[type="date"] {
+    color: #475569;
+
+    cursor: pointer;
+}
+
+
+/* NUMBER INPUT */
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+
+    .form-box {
+
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    h1 {
+        font-size: 26px;
+    }
+
+
+    .subtitle {
+        margin-bottom: 25px;
+    }
+
+
+    .button-group {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+.view-employees {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.view-employees a {
+    display: inline-block;
+    width: 100%;
+    padding: 13px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.view-employees a:hover {
+    background: #e0e7ff;
+    border-color: #818cf8;
+    transform: translateY(-1px);
+}
+
+
+/* Employee Records Table */
+
+.employee-box {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.employee-box h2 {
+    color: #2457a7;
+    margin-bottom: 8px;
+}
+
+#searchEmployee {
+    width: 100%;
+    padding: 13px;
+    margin: 18px 0;
+    border: 1px solid #d5dce8;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+#employeeList table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+    background: white;
+}
+
+#employeeList th {
+    background: #2457a7;
+    color: white;
+    padding: 14px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#employeeList td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e8edf4;
+    color: #333;
+    white-space: nowrap;
+}
+
+#employeeList tr:nth-child(even) {
+    background: #f5f8fc;
+}
+
+#employeeList tr:hover {
+    background: #edf3ff;
+}
+
+#employeeList button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#employeeList button:hover {
+    background: #b92332;
+}
+
+#employeeRecords {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+}
+
+#employeeRecords .employee-box {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* FORCE VERTICAL PAGE LAYOUT */
+
+body {
+    display: block !important;
+}
+
+.container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 25px auto !important;
+}
+
+#employeeRecords {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    margin: 35px auto !important;
+}
+
+#employeeRecords .employee-box {
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+}
